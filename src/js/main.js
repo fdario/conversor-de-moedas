@@ -7,7 +7,9 @@ calculateButton.addEventListener("click", result);
 function result(e) {
     e.preventDefault();
     res.innerHTML = ``;
-    fetch('http://economia.awesomeapi.com.br/last/USD-BRL,GBP-BRL').then(response => response.json()).then(data => {
+    fetch('http://economia.awesomeapi.com.br/last/USD-BRL,GBP-BRL')
+    .then(response => response.json())
+    .then(data => {
         if (input.value != '') {
             let ul = document.createElement('ul');
             let li = document.createElement('li');
