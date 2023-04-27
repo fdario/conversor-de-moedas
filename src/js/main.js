@@ -32,6 +32,7 @@ function result(e) {
         else {
             alert("Type some value");
         }
-    });
+    })
+    .catch(err => console.log(err.json()));
 
 }
