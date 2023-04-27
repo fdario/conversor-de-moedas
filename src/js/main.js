@@ -8,7 +8,6 @@ function result(e) {
     e.preventDefault();
     res.innerHTML = ``;
     fetch('http://economia.awesomeapi.com.br/last/USD-BRL,GBP-BRL').then(response => response.json()).then(data => {
-
         if (input.value != '') {
             let ul = document.createElement('ul');
             let li = document.createElement('li');
@@ -19,10 +18,8 @@ function result(e) {
             USD.innerHTML = `USD (Dólar americano) = $ ${parseFloat(input.value/data.USDBRL.bid).toFixed(2)}`;
             let li3 = document.createElement('li');
             let GBP = document.createElement('p');
-            GBP.innerHTML = `GBP (Libra esterlina) = £$ ${parseFloat(input.value/data.GBPBRL.bid).toFixed(2)}`;
-            
+            GBP.innerHTML = `GBP (Libra esterlina) = £$ ${parseFloat(input.value/data.GBPBRL.bid).toFixed(2)}`;          
             res.appendChild(ul);
-
             li.appendChild(BRL);
             ul.appendChild(li);
             li2.appendChild(USD);
