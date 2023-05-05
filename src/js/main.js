@@ -27,13 +27,13 @@ function result(e) {
                 let li3 = document.createElement('li');
                 let GBP = document.createElement('p');
                 GBP.innerHTML = `GBP (Libra esterlina) = £$ ${parseFloat(input.value / data.GBPBRL.bid).toFixed(2)}`;
-                
+
                 li.appendChild(BRL);
                 ul.appendChild(li);
-                
+
                 li2.appendChild(USD);
                 ul.appendChild(li2);
-                
+
                 li3.appendChild(GBP);
                 ul.appendChild(li3);
 
@@ -41,11 +41,14 @@ function result(e) {
             }
             else {
                 alert("Type the correct value!");
+                input.value = `0`;
             }
         })
         .catch(err => console.log(err.json()));
 }
-function clear() { 
-    input.nodeValue = `0`;
+function clear(e) {
+    e.preventDefault();
+    clearButton.remove();
+    input.value = `0`;
     res.innerHTML = ``;
 }
