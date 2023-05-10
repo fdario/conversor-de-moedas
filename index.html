@@ -11,10 +11,23 @@
 
 <body>
     <h1>Conversor de moedas</h1>
-    <h2>Converte Real (R$) em Dólar americano (USD - $) e Libra esterlina (GBP - £)</h2>
-    <div id="first-div">
+    <h2>Converte Real (R$), Dólar americano (USD - $) e Libra esterlina (GBP - £)</h2>
+    <div>
         <form>
-            <label>R$ <input type="number" id="inputValue" value="0"></label>
+            <label>
+                <select name="money" id="money">
+                    <optgroup label="Brasil">
+                        <option value="BRL">R$</option>
+                    </optgroup>
+                    <optgroup label="United States">
+                        <option value="USD">US$</option>
+                    </optgroup>
+                    <optgroup label="United Kingdom">
+                        <option value="GBP">£$</option>
+                    </optgroup>
+                </select>
+                <input type="number" id="inputValue" value="0">
+            </label>
             <button type="submit">Calcular</button>
         </form>
     </div>
